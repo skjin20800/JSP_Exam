@@ -6,7 +6,7 @@
 
 ## PPT (그림을 클릭하세요)
 
-[![PPT](./mdimg/PPT.png)](https://github.com/skjin20800/JSP_Exam/blob/master/%EC%8B%9C%ED%97%98.pptx?raw=true)
+[![PPT](./mdimg/1.png)](https://github.com/skjin20800/JSP_Exam/blob/master/%EC%8B%9C%ED%97%98.pptx?raw=true)
 
 
 ### 홈페이지 기능
