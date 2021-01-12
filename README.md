@@ -6,7 +6,7 @@
 
 ## PPT (그림을 클릭하세요)
 
-[![PPT](./mdimg/PPT.png)](https://github.com/skjin20800/JumpKing-Game/blob/master/%EC%A0%90%ED%94%84%ED%82%B9%EC%86%8C%EA%B0%9C.pptx?raw=true)
+[![PPT](./mdimg/PPT.png)](https://github.com/skjin20800/JSP_Exam/blob/master/%EC%8B%9C%ED%97%98.pptx?raw=true)
 
 
 ### 홈페이지 기능
