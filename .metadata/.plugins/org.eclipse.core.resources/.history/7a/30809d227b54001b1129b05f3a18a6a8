@@ -1,0 +1,67 @@
+package com.jkb.exam.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.jkb.exam.anno.RequestMapping;
+import com.jkb.exam.dto.JoinDto;
+import com.jkb.exam.dto.LoginDto;
+
+
+@WebServlet("/FrontController")
+public class FrontController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+   
+    public FrontController() {
+        super();
+    }
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	doProcess(request, response);
+	
+	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		doProcess(request, response);
+	}
+
+
+	protected void doProcess(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+	
+	}
+	
+	@RequestMapping("/userList")
+	public String userList() {
+		System.out.println("userList() 함수 호출됨");
+		return "/";
+	}
+	
+	@RequestMapping("/login")
+	public String login(LoginDto dto) {
+		System.out.println("login() 함수 호출됨");
+		return "/";
+	}
+	
+	@RequestMapping("/join")
+	public String join(JoinDto dto) {
+		System.out.println("join() 함수 호출됨");
+		return "/";
+	}
+	
+	@RequestMapping("/index")
+	public String index() {
+		System.out.println("index() 함수 호출됨");
+		return "/";
+	}
+
+
+}

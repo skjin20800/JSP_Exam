@@ -1,0 +1,26 @@
+package com.jkb.exam.Service;
+
+import com.jkb.exam.dao.UserDao;
+import com.jkb.exam.dto.JoinDto;
+import com.jkb.exam.dto.LoginDto;
+import com.jkb.exam.model.Users;
+
+
+public class UserService {
+
+	private UserDao userDao; 
+
+	public UserService() {
+		userDao = new UserDao();
+	}
+	
+	public Users 로그인(LoginDto dto) {
+		return userDao.findByUsernameAndPassword(dto);
+	}
+	
+	public int 회원가입(JoinDto dto) {
+		int result = userDao.save(dto);
+		return result; 
+	}
+	
+}

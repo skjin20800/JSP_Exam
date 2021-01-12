@@ -1,0 +1,19 @@
+package com.jkb.exam.Service;
+
+import com.jkb.exam.dao.UserDao;
+import com.jkb.exam.dto.JoinDto;
+
+
+public class UserService {
+
+	private UserDao userDao; 
+
+	public UserService() {
+		userDao = new UserDao();
+	}
+	public int 회원가입(JoinDto dto) {
+		int result = userDao.save(dto);
+		return result; 
+	}
+	
+}

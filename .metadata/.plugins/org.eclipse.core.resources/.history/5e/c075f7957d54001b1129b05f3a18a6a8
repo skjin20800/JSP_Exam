@@ -1,0 +1,64 @@
+package com.jkb.exam.controller;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.jkb.exam.Service.UserService;
+
+
+@WebServlet("/front")
+public class FrontController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+   
+    public FrontController() {
+        super();
+    }
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	doProcess(request, response);
+	
+	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		doProcess(request, response);
+	}
+
+
+	protected void doProcess(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String cmd = request.getParameter("cmd");
+		
+
+		UserService userService = new UserService();
+		// http://localhost:8080/blog/user?cmd=loginForm
+		if (cmd.equals("login")) {
+
+			RequestDispatcher dis = 
+					request.getRequestDispatcher("webExam/login.jsp");
+				dis.forward(request, response);	
+		} else if(cmd.equals("join")) {
+			System.out.println(cmd);
+			RequestDispatcher dis = 
+					request.getRequestDispatcher("webExam/join.jsp");
+				dis.forward(request, response);
+		} else if(cmd.equals("userList")) {
+			RequestDispatcher dis = 
+					request.getRequestDispatcher("webExam/userList.jsp");
+				dis.forward(request, response);
+			
+		}
+	
+	}
+	
+
+
+}
