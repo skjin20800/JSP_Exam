@@ -18,4 +18,10 @@ private String password;
 private String email;
 private String role;
 private Timestamp createDate;
+
+public String getUsername() {
+	return username.replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 }
+
+}
+
